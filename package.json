@@ -1,0 +1,46 @@
+{
+  "name": "@dwk/notion-to-apple-notes",
+  "version": "1.0.0",
+  "description": "One-way sync from Notion pages to Apple Notes (macOS 26+)",
+  "keywords": [
+    "notion",
+    "apple-notes",
+    "sync",
+    "macos",
+    "launchd"
+  ],
+  "license": "ISC",
+  "author": "David W. Keith <me@dwk.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidwkeith/notion-to-apple-notes.git"
+  },
+  "type": "module",
+  "bin": {
+    "notion-to-apple-notes": "bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "sync": "node bin/cli.mjs sync",
+    "dry-run": "node bin/cli.mjs sync --dry-run --verbose",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "marked": "^18.0.14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.2"
+  }
+}
